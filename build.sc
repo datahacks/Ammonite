@@ -418,7 +418,7 @@ class IntegrationModule(val crossScalaVersion: String) extends AmmInternalModule
   object test extends Tests {
     def forkEnv = super.forkEnv() ++ Seq(
       "AMMONITE_SHELL" -> shell().jar().path.toString,
-      "AMMONITE_ASSEMBLY" -> amm().assembly().path.toString
+      "AMMONITE_ASSEMBLY" -> amm().launcher().path.toString
     )
   }
 }
